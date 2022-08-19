@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AutorServiceService } from './autor-service.service';
+import { AutorServiceService } from './autor-service';
 
 describe('AutorServiceService', () => {
   let service: AutorServiceService;
@@ -14,3 +14,4 @@ describe('AutorServiceService', () => {
     expect(service).toBeTruthy();
   });
 });
+ 

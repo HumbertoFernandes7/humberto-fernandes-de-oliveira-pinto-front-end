@@ -1,4 +1,41 @@
 <div class="aba-inicial">
     <button routerLink="/home"> Home</button>
 </div>
+
 <h1>Lista de Livros</h1>
+
+<button> Adicionar </button>
+
+<div *ngIf="livros.length > 0 && erroListaLivro == ''">
+     <table>
+        <tr>
+            <th>Titulo</th>
+            <th>Alterar/Remover</th>
+        </tr>
+        <tr *ngFor="let livro of livros" >
+            <td>
+                {{livro.titulo}}
+            </td>
+            <td>
+                <button (click)="solicitacaoAlterarLivro(livro)" > Alterar </button>
+                <button (click)="solicitacaoRemocaoLivro(livro)"> Remover </button>
+            </td>
+        </tr>
+     </table>
+</div>
+
+<div *ngIf="livros.length <= 0 && erroListaLivro == ''">
+    não tem livros 
+</div>
+
+<div *ngIf="erroListaLivro != ''">
+    {{erroListaLivro}}
+</div>
+
+<div *ngIf="erroRemoverLivro != ''">
+    {{erroRemoverLivro}}
+</div>
+
+<div *ngIf="sucessoRemoverLivro != ''">
+    {{sucessoRemoverLivro}}
+</div>
