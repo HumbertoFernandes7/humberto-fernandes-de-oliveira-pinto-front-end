@@ -9,6 +9,7 @@ import { ListarLivrosComponent } from './listar-livros/listar-livros.component';
 import { ListarAutoresComponent } from './listar-autores/listar-autores.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { AlterarLivrosComponent } from './alterar-livros/alterar-livros.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     HomeComponent,
     ListarLivrosComponent,
     ListarAutoresComponent,
+    AlterarLivrosComponent,
     
   ],
   imports: [

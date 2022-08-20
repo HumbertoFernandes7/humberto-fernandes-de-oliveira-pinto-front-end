@@ -18,6 +18,9 @@ export class ListarLivrosComponent implements OnInit {
   erroAlterarLivro: string = ''
   sucessoAlterarLivro: string = ''
 
+  erroAdicionarLivro: string = ''
+  sucessoAdicionarLivro: string = ''
+
 
   constructor(private livroService: LivroService) { }
 
@@ -35,33 +38,45 @@ export class ListarLivrosComponent implements OnInit {
   }
 
 
-  solicitacaoRemocaoLivro(livro: livros) {
-    this.erroRemoverLivro = ''
-    this.sucessoRemoverLivro = ''
-    let text = "deseja remover: " + livro.titulo
-  
-    if(confirm(text) == true) {
-      this.livroService.removerLivro(livro.id).subscribe(successData=>{
-        this.sucessoRemoverLivro = "Livro: " + livro.titulo + "removido com sucesso"
-        this.buscaTodos()
-      },error=>{
-        this.erroRemoverLivro = "Ocorreu um erro ao remover: " + livro.titulo 
-
-      })
-    }
-  }
-
-
-  solicitacaoAlterarLivro(livro: livros){
-    this.erroAlterarLivro = ''
-    this.sucessoAlterarLivro = ''
-    let text = "deseja alterar " + livro.titulo
-
-    if(confirm(text) == true) {
-      console.log("livro alterado");
-    }else{
-      console.log("LIVRO NAO ALTERADO");
+    solicitacaoRemocaoLivro(livro: livros) {
+      this.erroRemoverLivro = ''
+      this.sucessoRemoverLivro = ''
+      let text = "deseja remover: " + livro.titulo
       
+      if(confirm(text) == true) {
+        this.livroService.removerLivro(livro.id).subscribe(successData=>{
+          this.sucessoRemoverLivro = "Livro: " + livro.titulo + " removido com sucesso"
+          this.buscaTodos()
+        },error=>{
+          this.erroRemoverLivro = "Ocorreu um erro ao remover: " + livro.titulo 
+          
+        })
+      }
     }
-  }
+  
+  
 }
+// solicitacaoAlterarLivro(livro: livros){
+  //   this.erroAlterarLivro = ''
+  //   this.sucessoAlterarLivro = ''
+  //   let text = "deseja alterar " + livro.titulo
+  
+  //   if(confirm(text) == true) {
+    //     console.log("livro alterado");
+    //   }else{
+      //     console.log("LIVRO NAO ALTERADO");
+    
+      //   }
+      // }
+
+      // solicitacaoAdicionarLivro(){
+      //   this.erroAdicionarLivro = ''
+      //   this.sucessoAdicionarLivro = ''
+      //   let text = "deseja adicionar um livro ? "
+    
+      //    if(confirm(text) == true) {
+      //    console.log("adicionado")
+      // }else{
+      //   console.log("nao adicionado");
+      //   }
+      // }
