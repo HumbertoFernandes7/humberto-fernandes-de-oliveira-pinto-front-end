@@ -4,7 +4,7 @@
 
 <h1>Lista de Autores</h1>
 
-<button (click)="solicitacaoErroGenerico()"> Adicionar </button>
+<button routerLink="/adicionar-autores"> Adicionar </button>
 
 <div *ngIf="autores.length > 0 && erroListaAutores == ''">
      <table>

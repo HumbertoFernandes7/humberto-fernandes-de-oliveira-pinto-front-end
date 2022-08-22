@@ -5,6 +5,8 @@ import { HomeComponent } from './home/home.component';
 import { ListarAutoresComponent } from './listar-autores/listar-autores.component';
 import { AlterarLivrosComponent } from './alterar-livros/alterar-livros.component';
 import { AlterarAutoresComponent } from './alterar-autores/alterar-autores.component';
+import { AdicionarLivrosComponent } from './adicionar-livros/adicionar-livros.component';
+import { AdicionarAutoresComponent } from './adicionar-autores/adicionar-autores.component';
 
 const routes: Routes = [
 
@@ -18,16 +20,24 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path:'listar-autores',
-    component: ListarAutoresComponent
-  },
-  {
     path:'listar-livros',
     component: ListarLivrosComponent
   },
   {
+    path:'adicionar-livros',
+    component: AdicionarLivrosComponent
+  },
+  {
     path:'alterar-livros',
     component: AlterarLivrosComponent
+  },
+  {
+    path:'listar-autores',
+    component: ListarAutoresComponent
+  },
+  {
+    path:'adicionar-autores',
+    component: AdicionarAutoresComponent
   },
   {
     path:'alterar-autores',

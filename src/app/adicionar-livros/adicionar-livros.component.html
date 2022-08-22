@@ -1,0 +1,13 @@
+<div class="aba-inicial">
+    <button routerLink="/home">Home</button>
+    <button routerLink="/listar-livros">Voltar</button>
+</div>
+<h2>Cadastro de Livros</h2>
+<div>
+    <form class="formulario-adicionar-livro" method="post" action="envio_dados.java">
+        <input type="text" name="titulo" placeholder="Titulo do Livro"><br>
+        <input type="text" name="dataLancamento" placeholder="Data de lançamento do livro"><br>
+        <input type="text" name="autores" placeholder="Digite o id do Autor"><br>
+        <input (click)="solicitacaoErroGenerico()" type="button" name="cadastrar" value="Cadastrar">    
+    </form>
+</div>

@@ -4,7 +4,7 @@
 
 <h1>Lista de Livros</h1>
 
-<button (click)="solicitacaoErroGenerico()"> Adicionar </button>
+<button routerLink="/adicionar-livros"> Adicionar </button>
 
 <div *ngIf="livros.length > 0 && erroListaLivro == ''">
      <table>
