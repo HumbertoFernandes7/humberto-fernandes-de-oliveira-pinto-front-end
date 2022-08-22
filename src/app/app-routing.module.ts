@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ListarAutoresComponent } from './listar-autores/listar-autores.component';
 import { AlterarLivrosComponent } from './alterar-livros/alterar-livros.component';
+import { AlterarAutoresComponent } from './alterar-autores/alterar-autores.component';
 
 const routes: Routes = [
 
@@ -25,8 +26,12 @@ const routes: Routes = [
     component: ListarLivrosComponent
   },
   {
-    path:'altera-livros',
+    path:'alterar-livros',
     component: AlterarLivrosComponent
+  },
+  {
+    path:'alterar-autores',
+    component: AlterarAutoresComponent
   }
 ];
 

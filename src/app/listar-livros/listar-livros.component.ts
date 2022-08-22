@@ -15,11 +15,7 @@ export class ListarLivrosComponent implements OnInit {
   erroRemoverLivro: string = ''
   sucessoRemoverLivro: string = ''
 
-  erroAlterarLivro: string = ''
-  sucessoAlterarLivro: string = ''
-
-  erroAdicionarLivro: string = ''
-  sucessoAdicionarLivro: string = ''
+  erroGenerico: string = ''
 
 
   constructor(private livroService: LivroService) { }
@@ -52,6 +48,10 @@ export class ListarLivrosComponent implements OnInit {
           
         })
       }
+    }
+
+    solicitacaoErroGenerico(){
+      alert("Função indisponivel !")
     }
   
   

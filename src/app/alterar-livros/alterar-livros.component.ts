@@ -12,4 +12,7 @@ export class AlterarLivrosComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  solicitacaoErroGenerico(){
+    alert("Função indisponivel !")
+  }
 }

@@ -25,11 +25,5 @@ export class AutorService{
     return this.httpClient.put(`${URL_API}/${id}`, autor)
   }
 
-
-  removerAutor(id: number): Observable<void> {
-    return this.httpClient.delete<void>(URL_API + "/" + id)
-  }
-
-
 }
 

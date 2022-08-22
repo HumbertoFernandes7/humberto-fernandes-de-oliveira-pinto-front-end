@@ -4,20 +4,20 @@
 
 <h1>Lista de Livros</h1>
 
-<button> Adicionar </button>
+<button (click)="solicitacaoErroGenerico()"> Adicionar </button>
 
 <div *ngIf="livros.length > 0 && erroListaLivro == ''">
      <table>
         <tr>
             <th>Titulo</th>
-            <th>Alterar/Remover</th>
+        
         </tr>
         <tr *ngFor="let livro of livros" >
             <td>
                 {{livro.titulo}}
             </td>
             <td>
-                <button routerLink="/altera-livros"> Alterar </button>
+                <button routerLink="/alterar-livros"> Alterar </button>
                 <button (click)="solicitacaoRemocaoLivro(livro)"> Remover </button>
             </td>
         </tr>
@@ -25,7 +25,7 @@
 </div>
 
 <div *ngIf="livros.length <= 0 && erroListaLivro == ''">
-    não tem livros 
+    Não há livros cadastrados 
 </div>
 
 <div *ngIf="erroListaLivro != ''">

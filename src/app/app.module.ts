@@ -10,6 +10,7 @@ import { ListarAutoresComponent } from './listar-autores/listar-autores.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { AlterarLivrosComponent } from './alterar-livros/alterar-livros.component';
+import { AlterarAutoresComponent } from './alterar-autores/alterar-autores.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AlterarLivrosComponent } from './alterar-livros/alterar-livros.componen
     ListarLivrosComponent,
     ListarAutoresComponent,
     AlterarLivrosComponent,
+    AlterarAutoresComponent,
     
   ],
   imports: [
