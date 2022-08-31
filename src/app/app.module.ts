@@ -12,14 +12,15 @@ import { LivroModule } from './livros/livro.module';
 @NgModule({
   declarations: [
     AppComponent,
-  
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     AutorModule,
     LivroModule,
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
