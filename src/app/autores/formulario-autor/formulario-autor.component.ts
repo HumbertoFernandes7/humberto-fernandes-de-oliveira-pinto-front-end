@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-formulario-autor',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioAutorComponent implements OnInit {
 
-  constructor() { }
+  id: number | null
+  
+  constructor(private activateRoute: ActivatedRoute) { 
+    this.id = this.activateRoute.snapshot.paramMap.get("id") as number | null
+    
+  }
 
   ngOnInit(): void {
   }

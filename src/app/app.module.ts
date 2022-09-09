@@ -11,14 +11,14 @@ import { LivroModule } from './livros/livro.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
     AutorModule,
-    LivroModule,
+    LivroModule
   ],
   
   providers: [],
